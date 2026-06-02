@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orçamento</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    
+  </head>
+  <body>
+    <div class="container" id="main">
+      <button id="toggleSidebar" class="toggle-btn">☰</button>
+      <div class="sidebar" class="full" id="sidebar">
+        <div class="logo"></div>
+        <nav class="menu">
+          <a href="index.html" class="menu-item"
+            ><ion-icon name="home-outline" style="font-size: 1.5rem"></ion-icon>
+            Home
+          </a>
+          <a href="orcamento.html" class="menu-item active"
+            ><ion-icon
+              name="newspaper-outline"
+              style="font-size: 1.5rem"
+            ></ion-icon>
+            Orçamentos
+          </a>
+        </nav>
+      </div>
+      <div class="header">
+        <img
+          src="styles/assets/logo02.png"
+          alt="Logo ConnectCar"
+          class="logo"
+        />
+        <p>Olá Jadson! <span class="greetings">""</span></p>
+      </div>
+
+      <div class="card">
+        <h2 style="margin-bottom: 20px">Novo Orçamento</h2>
+
+        <form id="orcForm">
+            <h4>Informações do Cliente</h4>
+          <input type="text" id="cliente" placeholder="Cliente *" required />
+          <input type="text" id="veiculo" placeholder="Veículo *" required />
+          <input type="text" id="placa" placeholder="Placa *" required />
+          <input type="text" id="defeito" placeholder="Defeito *" required />
+          <input type="text" id="defeito2" placeholder="Defeito" />
+          <input type="text" id="defeito3" placeholder="Defeito" />
+
+          <select id="servico" required>
+            <option value="">Serviço *</option>
+            <option value="Pintura">Pintura</option>
+            <option value="Retoque">Retoque</option>
+            <option value="Polimento">Polimento basico</option>
+            <option value="Polimento2">Polimento detalhado</option>
+            <option value="Peca">Substituição de Peças</option>
+            <option value="Farol">Restauração de Faróis</option>
+            <option value="Enceramento">Enceramento</option>
+            <option value="Outro">Outro</option>
+          </select>
+
+          <input type="text" id="observacao" placeholder="Observação" />
+
+          <h4>Imagens</h4>
+          <div class="img-section">
+            <input type="file" id="imagem" placeholder="Imagem" />
+            <input type="file" id="imagem2" placeholder="Imagem" />
+            <input type="file" id="imagem3" placeholder="Imagem" />
+            <input type="file" id="imagem4" placeholder="Imagem" />
+        </div>
+
+        <h4>Valores</h4>
+          <input
+            type="number"
+            id="valor"
+            placeholder="Valor Cobrado *"
+            required
+          />
+          <button type="submit" class="submitButton">Gerar Orçamento</button>
+        </form>
+      </div>
+    </div>
+     <div id="pdfTemplate"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="javascript/main.js"></script>
+
+<script src="javascript/sidebar.js"></script>
+
+<script src="javascript/orcamento.js"></script>
+  </body>
+</html>

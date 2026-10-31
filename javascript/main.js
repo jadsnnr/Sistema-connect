@@ -2,7 +2,7 @@ const form = document.getElementById("registroForm");
 const tabela = document.getElementById("tabelaRegistros");
 const totalRegistros = document.getElementById("totalRegistros");
 const totalDespesas = document.getElementById("despesas");
-const totalReceitas = document.getElementById("receitas");
+const totalReceita = document.getElementById("receita");
 const saldo = document.getElementById("saldo");
 const saudações = document.querySelector(".greetings");
 
@@ -30,7 +30,7 @@ function atualizarDashboard() {
   totalRegistros.textContent = registros.length;
 
   const total = registros.reduce((acc, item) => acc + Number(item.valor), 0);
-  totalReceitas.textContent = total.toLocaleString("pt-BR", {
+  totalReceita.textContent = total.toLocaleString("pt-BR", {
     style: "currency",
     currency: "BRL",
   });

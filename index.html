@@ -28,6 +28,7 @@
             ><ion-icon name="home-outline" style="font-size: 1.5rem;"></ion-icon> Home
           </a>
           <a href="orcamento.html" class="menu-item"><ion-icon name="newspaper-outline" style="font-size: 1.5rem;"></ion-icon> Orçamentos </a>
+          <a href="ordem_servico.html" class="menu-item"><ion-icon name="document-text-outline" style="font-size: 1.5rem;"></ion-icon> Ordens de Serviço </a>
         </nav>
       </div>
       <div class="header">
@@ -51,8 +52,8 @@
         </div>
 
         <div class="stat-box">
-          <p>Receitas</p>
-          <h2 id="receitas">R$ 0</h2>
+          <p>Receita</p>
+          <h2 id="receita">R$ 0</h2>
         </div>
 
         <div class="stat-box">
@@ -62,7 +63,7 @@
       </div>
 
       <div class="card">
-        <h2 style="margin-bottom: 20px">Novo Registro</h2>
+        <h2 style="margin-bottom: 20px">Nova OS</h2>
 
         <form id="registroForm">
           <input type="text" id="nome" placeholder="Nome" required />
@@ -74,17 +75,15 @@
             <option value="Serviço">Serviço</option>
             <option value="Outro">Outro</option>
           </select>
-
+          
           <input type="number" id="despesa" placeholder="Despesa" />
           <input type="number" id="valor" placeholder="Valor" required />
-
           <button type="submit">Salvar</button>
         </form>
       </div>
 
       <div class="card">
-        <h2>Registros</h2>
-
+        <h2>Ordem de Serviço</h2>
         <table>
           <thead>
             <tr>

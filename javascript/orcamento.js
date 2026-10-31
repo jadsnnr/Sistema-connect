@@ -69,24 +69,21 @@ if (salvarOC) {
 
       doc.text("Defeitos Informados:", 20, 100);
 
-      doc.text(`• ${defeito}`, 25, 110);
+      doc.text(`• ${defeito}`, 25, 120);
 
-      let linha = 120;
+      let linha = 100;
 
-      if (defeito2) {
-        doc.text(`• ${defeito}`, 25, 110);
-        let linha = 110;
+      if (defeito2 && !defeito3) {
+      doc.text(`• ${defeito}`, 25, 120);
+      let linha = 130;
         doc.text(`• ${defeito2}`, 25, linha);
         linha += 10;
-      }
-
-      if (defeito3) {
-        doc.text(`• ${defeito}`, 25, 110);
-        let linha = 110;
+      }else if (defeito2 && defeito3) {
+        doc.text(`• ${defeito}`, 25, 120);
+        let linha = 130;
         doc.text(`• ${defeito2}`, 25, linha);
         linha += 10;
         doc.text(`• ${defeito3}`, 25, linha);
-
         linha += 10;
       }
 
@@ -94,7 +91,7 @@ if (salvarOC) {
          OBSERVAÇÕES
       ========================= */
 
-      linha += 10;
+      linha += 60;
 
       doc.text("Observações:", 20, linha);
 
@@ -110,7 +107,6 @@ if (salvarOC) {
 
       const valorFormatado = Number(valor).toLocaleString("pt-BR", {
         style: "currency",
-
         currency: "BRL",
       });
 

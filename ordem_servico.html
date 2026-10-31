@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema ConnectCar</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/sidebar.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="javascript/main.js" defer></script>
+    <script src="javascript/sidebar.js" defer></script>
+    <script src="javascript/greetings.js" defer></script>
+  </head>
+  <body>
+    <div class="container" id="main">
+      <button id="toggleSidebar" class="toggle-btn">☰</button>
+      <div class="sidebar" class="full" id="sidebar">
+        <div class="logo"></div>
+        <nav class="menu">
+          <a href="index.html" class="menu-item"
+            ><ion-icon name="home-outline" style="font-size: 1.5rem;"></ion-icon> Home
+          </a>
+          <a href="orcamento.html" class="menu-item"><ion-icon name="newspaper-outline" style="font-size: 1.5rem;"></ion-icon> Orçamentos </a>
+          <a href="ordem_servico.html" class="menu-item active"><ion-icon name="document-text-outline" style="font-size: 1.5rem;"></ion-icon> Ordem de Serviço </a>
+        </nav>
+      </div>
+      <div class="header">
+        <img
+          src="styles/assets/logo02.png"
+          alt="Logo ConnectCar"
+          class="logo"
+        />
+        <p>Olá Jadson! <span class="greetings">""</span></p>
+      </div>
+
+      <div class="card">
+        <h2 style="margin-bottom: 20px">Nova OS</h2>
+
+        <form id="registroForm">
+          <input type="text" id="nome" placeholder="Nome" required />
+
+          <select id="categoria" required>
+            <option value="">Categoria</option>
+            <option value="Cliente">Cliente</option>
+            <option value="Veículo">Veículo</option>
+            <option value="Serviço">Serviço</option>
+            <option value="Outro">Outro</option>
+          </select>
+
+          <input type="number" id="despesa" placeholder="Despesa" />
+          <input type="number" id="valor" placeholder="Valor" required />
+
+          <button type="submit">Salvar</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Ordem de Serviço</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Categoria</th>
+              <th>Despesa</th>
+              <th>Receita</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="tabelaRegistros"></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

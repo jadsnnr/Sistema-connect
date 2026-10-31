@@ -36,7 +36,7 @@ if (salvarOC) {
 
     const logo = new Image();
 
-    logo.src = "styles/assets/logo01.png";
+    logo.src = "styles/assets/logocnc2.png";
 
     logo.onload = async () => {
       doc.addImage(logo, "PNG", 15, 10, 40, 20);
